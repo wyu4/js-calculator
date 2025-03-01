@@ -26,7 +26,7 @@ function calculate() {
     }
     catch(error) {
         setDisplay(error_message);
-        console.warn("Could not calculate expression '" + display.value + "': " + error)
+        console.warn("Could not calculate expression '" + display.value + "': " + error);
     }
 
 }
