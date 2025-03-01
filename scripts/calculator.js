@@ -2,6 +2,8 @@ const error_message = "ERROR";
 
 const display = document.getElementById("display");
 
+appendToDisplay(load('input'));
+
 function appendToDisplay(input) {
     if (display.value == error_message) {
         clearDisplay();
@@ -19,6 +21,8 @@ function calculate() {
     }
     catch(error) {
         display.value = error_message;
-        console.warn("Error calculating: " + error)
+        console.warn("Could not calculate expression '" + display.value + "': " + error)
     }
+    
+    save('input', display.value);
 }
